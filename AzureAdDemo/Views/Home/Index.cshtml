@@ -31,11 +31,11 @@
     {
         <span><br />Hello @((User.Identity as System.Security.Claims.ClaimsIdentity)?.FindFirst("name")?.Value)</span>
         <br /><br />
-        @Html.ActionLink("See Your Claims", "Index", "Claims")
+        @Html.ActionLink("See Your Claims", "Index", "Claims", null, new { @class = "btn btn-success"})
         <br /><br />
-        @Html.ActionLink("Test Significate pag", "Index", "Sign")
+        @Html.ActionLink("Test Significate pag", "Index", "Sign", null, new { @class = "btn btn-success" })
         <br /><br />
-        @Html.ActionLink("Sign out", "SignOut", "Home")
+        @Html.ActionLink("Sign out", "SignOut", "Home", null , new { @class = "btn btn-warning" })
     }
     @if (!string.IsNullOrWhiteSpace(Request.QueryString["errormessage"]))
     {

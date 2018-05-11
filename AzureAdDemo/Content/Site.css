@@ -2,6 +2,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 50px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -24,3 +25,7 @@ textarea {
     cursor: pointer;
     color: red;
 }
+
+/*body {
+    font-size: 16px !important;
+}*/

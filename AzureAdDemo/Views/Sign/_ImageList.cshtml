@@ -1,0 +1,45 @@
+﻿@{
+    string[] imagePaths = ViewBag.ImagePaths;
+}
+
+
+<div class="row" id="imgList">
+    @if (imagePaths.Length > 0)
+    {
+        foreach (string imgPath in imagePaths)
+        {
+            <div class="imgItem">
+                <img width="200" src="UserImage/@imgPath" />
+                <div class="glyphicon glyphicon-remove imgDelBtn" onclick="Del('@imgPath');"></div>
+            </div>
+        }
+    }
+</div>
+
+<script>
+    //Html.Partial("~/Views/Sign/_ImageList.cshtml");
+
+    function Del(fullfilePath) {
+        console.log("Full: ", fullfilePath);
+        var fileName = fullfilePath.split('\\');
+        fileName = fileName[fileName.length - 1];
+        console.log("single: ", fileName);
+
+        $.ajax({
+            url: 'api/Upload/DelImage',
+            type: "POST",
+            //data: JSON.stringify(fileName),
+            data: '"' + fileName + '"',
+            //dataType: 'json',
+            contentType: "application/json",
+            success: function (response) {
+                location.reload();
+            },
+            error: function (data) {
+                alert(data.responseText);
+                console.log(data);
+            }
+        });
+    }
+
+</script>

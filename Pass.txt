@@ -1,11 +1,3 @@
-username:         premierrefundsupport@fintrax.com
-password:         25Yellow_Powder!
-
 In AzureAD I have created a user for you for testing.
-Username:     Aleksandr.Karpiak@premierrefundsupportfintrax.onmicrosoft.com
+Username:     aleksandr@premierrefundsupportfintrax.onmicrosoft.com
 Password:     Gasd549*
-
-
-
-
-34dsjfgg_dsf!
